@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Info sobre eventos en teclado</title>
+</head>
+<body>
+	<script>
+	window.onload = function() {
+
+		var txtarea = document.getElementById('tarea');
+
+	// document.onkeyup = muestraInformacion;
+	// document.onkeypress = muestraInformacion;
+	// document.onkeydown = muestraInformacion;
+	tarea.addEventListener("keyup", muestraInformacion);
+	txtarea.addEventListener("keypress", muestraInformacion);
+	tarea.addEventListener("keydown", muestraInformacion);
+	}
+	function muestraInformacion(elEvento) {
+	var evento = window.event || elEvento;
+	var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+	"Propiedad keyCode: " + evento.keyCode + "<br>" +
+	"Propiedad charCode: " + evento.charCode + "<br>" +
+	"Carácter pulsado: " + String.fromCharCode(evento.charCode);
+	info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+	}
+
+	function manejador(elEvento) {
+	var evento = elEvento || window.event;
+	var caracter = evento.charCode || evento.keyCode;
+	alert("El carácter pulsado es: " + String.fromCharCode(caracter));
+	}
+		</script>
+...
+<textarea id="tarea"></textarea>
+<div id="info"></div>
+
+
+</body>
+</html>
