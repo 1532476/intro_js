@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 10</title>
+	<script>
+
+	function palindromo(cadena) {
+	var resultado = "La cadena \"" + cadena+"\" \n ";
+	//Pasar a minuscula todo
+	var cadenaOriginal = cadena.toLowerCase();
+	//Convertir la cadena a un Array
+	var letrasEspacios = cadenaOriginal.split("");
+
+	//Eliminar espacios en blanco. Se puede usar la funcion replace
+	var cadenaSinEspacios = "";
+	for ( i in letrasEspacios){
+		if (letrasEspacios[i] != " "){
+			cadenaSinEspacios += letrasEspacios[i];
+		}
+	}
+
+	//Agarramos la nueva cadena sin espacios y la metemos en un array
+	var letras = cadenaSinEspacios.split("");
+	var letrasReves = cadenaSinEspacios.split("").reverse();
+	console.log(letras);
+	console.log(letrasReves);
+	
+
+	//Comprobando si es un palindromo
+	//Se puede usar break. COmo? ni idea.
+
+	var iguales = true;
+	for(i in letras){
+		if(letras[i] == letrasReves[i]){
+			//Todo bien
+		} else {
+			//Ya no es palindromo
+			iguales = false;
+		}
+	}
+
+	if(iguales) {
+		resultado += " es un palindromo";
+	}
+	else {
+		resultado += " no es un palindromo";
+	}
+	return resultado;
+	}
+	alert(palindromo("La ruta nos aporto otro paso natural"));
+	alert(palindromo("Esta frase no se parece a ningun palindromo"));
+	</script>
+	
+</head>
+<body>
+	<!-- Ejercicio 10
+	Definir una función que determine si la cadena de texto que se le pasa como parámetro es un
+	palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha. Ejemplo de
+	palíndromo complejo: "La ruta nos aporto otro paso natural". -->
+</body>
+</html>

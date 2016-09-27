@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 9</title>
+	<script type="text/javascript">
+		
+
+		//Si ejecutas una funcion, devuelve el return, pero no puedes usarla en el alert(), eliminas el return y pones defrente el alert()
+		//Si ejecutas la funcion dentro de un alert, si sale el return como retorno
+
+		var cadena = prompt("Ingrese un texto para comprobar");
+		var resultado ="La cadena \"" + cadena + "\" ";
+		alert(comprobarCadena(cadena);
+
+		function comprobarCadena(cadena){
+			if (cadena == cadena.toUpperCase()) {
+				resultado += " esta formada por mayusculas";
+			} else if(cadena == cadena.toLowerCase()){ 
+				resultado += " esta formada por minusculas";
+			} else {
+				resultado += " esta formada por mayúsculas y minúsculas";
+			}
+			return resultado;
+		}
+
+	</script>
+</head>
+<body>
+	<!-- Ejercicio 9
+	Definir una función que muestre información sobre una cadena de texto que se le pasa como
+	argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada
+	sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas. -->
+</body>
+</html>
