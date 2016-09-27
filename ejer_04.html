@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Ejericico 4</title>
+	<script type="text/javascript">
+		var valores = [true, 5, false, "hola","adios", 2];
+
+		var elementoMayor;
+		
+		//Cual es mayor
+		if (	valores[3] > valores[4]) {
+			elementoMayor = valores[3];
+		}	else {
+			elementoMayor = valores[4];
+		}
+		alert("El elemnto mayor es: " + elementoMayor);
+		//Obtener valores booleanos
+
+		var valor1 = valores[0], 
+			valor2 = valores[2],
+			resultado, resultado2;
+
+		//Usando operadores necesarios para obtener true o false
+
+		resultado1 =  valor1 && valor2;
+
+		resultado2 = valor1 || valor2;
+
+		alert("El resultado de valor1 && valor2 es: " + resultado1 );
+		alert("El resultado de valor1 || valor2 es: " + resultado2);
+
+
+
+		//Operaciones Matematicas
+		var suma = valores[1] + valores[5];
+		var resta = valores[1] - valores[5];
+		var multiplicacion = valores[1] * valores[5];
+		var division = valores[1] / valores[5];
+		var modulo = valores[1] % valores[5];
+
+		alert(suma);
+		alert(resta);
+		alert(multiplicacion);
+		alert(division);
+		alert(modulo);
+
+	</script>
+
+</head>
+<body>
+	<!-- 
+	A partir del siguiente array que se proporciona: var valores = [true, 5, false, "hola",
+	"adios", 2];
+	1. Determinar cual de los dos elementos de texto es mayor 
+	2. Utilizando exclusivamente los dos valores booleanos del array, determinar los operadores
+	necesarios para obtener un resultado true y otro resultado false
+	3. Determinar el resultado de las cinco operaciones matemáticas realizadas con los dos
+	elementos numéricos
+	-->
+</body>
+</html>
