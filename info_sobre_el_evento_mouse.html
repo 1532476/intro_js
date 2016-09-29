@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Eventos sobre el evento mouse</title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+
+
+		function muestraInformacion(elEvento){
+			var evento = elEvento || window.event;
+			//Las coordenadas de la posicion del puntero respecto de la ventana del navegador se obtienen mediante las propiedades clientX y clientY
+			 /*
+			 var coordenadaX = evento.clientX;
+			 var coordenadaY = evento.clientY;
+			 */
+			//Las coordenadas del puntero respecto de la pantalla completa del ordenador se obtienen mediante las propiedades screenX y screenY
+			/*
+			var coordenadaX = evento.screenX;
+			var coordenadaY = evento.screenY;
+			*/
+			//Las coordenadas del puntero respecto del origen de la pagina se obtienen mediante las propiedades pageX y pageY
+
+			var coordenadaX = evento.pageX, 
+				coordenadaY = evento.pageY;			
+			alert("Has pulsado el raton en la posicion: " + coordenadaX + ", " + coordenadaY);
+		}
+		document.onclick = muestraInformacion;
+
+	</script>
+</head>
+<body style="width: 300px;">
+	<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+</html>

@@ -7,10 +7,24 @@
 <body>
 
 <div id="seccion" style="width:150px; height:60px; border:1px solid silver">
+<!--Adentro del div de arriba podria ir  onmouseover="this.style.borderColor='green';"
+onmouseout="this.style.borderColor='red';"> 
+-->
 Sección de contenidos...
 </div>		
 	<script type="text/javascript">
-		var resalta = function (elEvento) {
+
+		window.onload = function() {
+		// document.getElementById("seccion").onmouseover = resalta;
+		// document.getElementById("seccion").onmouseout = resalta;
+		var seccion = document.getElementById("seccion");
+
+		seccion.addEventListener("mouseover", resalta);
+		seccion.addEventListener("mouseout", resalta);
+		};
+
+		//var resalta = function (elEvento) 
+		function resalta(elEvento)		{
 		var evento = elEvento || window.event;
 		switch(evento.type) {
 		case 'mouseover':
@@ -19,13 +33,7 @@ Sección de contenidos...
 		case 'mouseout':
 		this.style.borderColor = 'red';
 		break;
-		}
-		}
-		window.onload = function() {
-		document.getElementById("seccion").onmouseover = resalta;
-		document.getElementById("seccion").onmouseout = resalta;
-		}
-
+		}}
 
 	</script>
 </body>

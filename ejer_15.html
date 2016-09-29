@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 15 - Información sobre eventos</title>
+    <style type="text/css">
+    body {
+        font-family: arial, helvetica;
+    }
+    
+    #info {
+        width: 200px;
+        border: 1px solid silver;
+        padding: .5em;
+        position: fixed;
+    }
+    
+    #info h1 {
+        margin: 0;
+    }
+    </style>
+    <script type="text/javascript">
+    // function gato(){
+    // 	var obj = {
+    //      a: 7,
+    //      b: "hi",
+    //      c: "adios"
+    //  };
+    //  for (var p in obj) {
+    //      document.writeln("Propiedad " + p + " = " + obj[p] + "<br>");
+    //  }
+    // };
+    window.onload = function() {
+        var info = document.getElementById("info");
+
+        document.addEventListener("click", muestraInformacion);
+        document.addEventListener("keypress", muestraInformacion);
+    };
+
+    function muestraInformacion(elEvento) {
+        info.innerHTML = "";
+        var evento = elEvento || window.event;
+        if (evento.type == "click") {
+            //Respecto al navegador
+            var coordenadaX = evento.clientX,
+                coordenadaY = evento.clientY;
+            info.innerHTML += "<h1>Mouse</h1><br>" + "Navegador [" + coordenadaX + ", " + coordenadaY + "]";
+            //Respecto a la pagina
+            coordenadaX = evento.pageX;
+            coordenadaY = evento.pageY;
+            info.innerHTML += "<br>" + "Pagina [" + coordenadaX + ", " + coordenadaY + "]";
+            info.style.background = "#FFFFCC";
+        } else {
+
+        	var codigo = evento.keyCode;
+        	var caracter = evento.charCode || evento.keyCode;
+        	caracter = String.fromCharCode(caracter);
+        	info.innerHTML += "<h1>Teclado</h1><br>"+ "Carácter ["+ caracter + "]"+"<br>"+"Código ["+ codigo + "]";
+        	info.style.background = "#CCE6FF";
+
+
+        }
+
+        //alert("Has pulsado" + coordenadaX + ", "+coordenadaY );
+        // info.innerHTML = '<h1>' + mensaje[0] + '</h1>';
+        //Esto no funciona ya que no es un array, sino un oebjto
+        /*
+         for (var i = 1; i < mensaje.length; i++) {
+            info.innerHTML += '<p>' + mensaje[i] + '</p>';
+        */
+        //Para explorar todas las propiedades del del evento
+        /*
+        for (var p in mensaje){
+        	document.writeln("Propiedad " + p + " = " + mensaje[p] + "<br>");
+        	*/
+
+    }
+    </script>
+</head>
+
+<body>
+    <!-- 1. Al mover el ratón en cualquier punto de la ventana del navegador, se muestre la posición
+del puntero respecto del navegador y respecto de la página:
+Figura 6.1. Información que se muestra para los eventos del ratón
+Para mostrar los mensajes, utilizar la función muestraInformacion() deduciendo su
+funcionamiento a partir de su código fuente.
+2. Al pulsar cualquier tecla, el mensaje mostrado debe cambiar para indicar el nuevo evento y
+su información asociada:
+Figura 6.2. Información que se muestra para los eventos del teclado
+3. Añadir la siguiente característica al script: cuando se pulsa un botón del ratón, el color de
+fondo del cuadro de mensaje debe ser amarillo (#FFFFCC) y cuando se pulsa una tecla, el
+Introducción a JavaScript Capítulo 6. Eventos
+www.librosweb.es 76
+color de fondo debe ser azul (#CCE6FF). Al volver a mover el ratón, el color de fondo vuelve
+a ser blanco.
+Figura 6.3. El color de fondo del cuadro de información cambia en función del tipo de
+evento -->
+    <div id="info"></div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</body>
+
+</html>
